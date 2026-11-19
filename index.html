@@ -4,83 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>nA labs — homepage hero</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
-<style>
-:root{
-  --night:#050505;
-  --indigo:#0C123F;
-  --ink:#111111;
-  --blue:#111111;
-  --glow:#CFCFCF;
-  --paper:#EDEDED;
-  --pad:clamp(20px,5vw,64px);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--night);color:#fff;font-family:'Archivo','Helvetica Neue',Arial,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-a:focus-visible{outline:3px solid var(--glow);outline-offset:3px}
-
-.hero{
-  position:relative;overflow:hidden;
-  min-height:100vh;min-height:100svh;
-  display:flex;flex-direction:column;
-  padding:clamp(18px,3vw,32px) var(--pad) 0;
-  background:#060606;
-}
-
-.nav{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.nav .nav-mark{display:block;width:clamp(52px,6vw,66px);height:auto}
-.nav-links{display:flex;align-items:center;gap:clamp(20px,3vw,40px);font-size:14px;font-weight:600;font-stretch:112%;letter-spacing:.09em;text-transform:uppercase}
-.nav-links a{text-decoration:none;padding:12px 0;white-space:nowrap}
-.nav-links a:hover{color:var(--glow)}
-.nav-links a.talk{background:#fff;color:#000;padding:13px 22px;border-radius:4px;font-weight:600}
-.nav-links a.talk:hover{background:var(--glow);color:#000}
-@media (max-width:640px){.nav-links a.plain{display:none}}
-
-.head{position:relative;z-index:2;text-align:center;padding-top:clamp(20px,4vh,56px)}
-.wordmark{display:block;width:100%;height:auto;overflow:visible}
-.head .wordmark{max-width:1040px;margin:0 auto}
-@media (min-width:900px){.head .wordmark{max-width:min(860px,60vw)}}
-.wordmark .ink{fill:none;stroke:#fff;stroke-width:26;stroke-linejoin:round}
-.wordmark .joint{fill:#fff}
-.wordmark .part{fill:#9C9C9C}
-.forearm{transform-box:view-box;transform-origin:215px 34px}
-.head h1{margin:clamp(18px,3vh,30px) auto 0;font-size:clamp(20px,2.7vw,34px);line-height:1.18;font-weight:600;font-stretch:125%;letter-spacing:-0.005em;max-width:17em;color:#fff}
-.head p{margin:12px auto 0;font-size:17px;line-height:1.45;color:#C4C4C4;max-width:30em}
-
-.scene{position:relative;z-index:1;margin:auto calc(-1 * var(--pad)) 0;display:flex;justify-content:center}
-.scene img{display:block;flex:none;width:max(100%,190vw,560px);max-width:1536px;height:auto;margin-top:-17vw;
-  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 24%);mask-image:linear-gradient(180deg,transparent 0,#000 24%)}
-@media (min-width:900px){.scene img{width:min(118%,1700px);max-width:none;margin-top:-11vw}}
-.note{position:absolute;right:var(--pad);bottom:12px;z-index:3;margin:0;font-size:14px;color:#BDBDBD}
-
-.lab{background:var(--paper);color:var(--ink);padding:clamp(48px,8vw,96px) var(--pad)}
-.lab h2{margin:0 0 10px;font-size:clamp(24px,3vw,34px);font-weight:600;font-stretch:125%}
-.lab .lede{margin:0 0 clamp(28px,4vw,48px);font-size:17px;line-height:1.5;max-width:34em}
-.tasks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr)}
-.tasks li{padding:22px clamp(16px,2.4vw,32px) 6px 0;border-top:3px solid var(--blue)}
-.tasks li + li{padding-left:clamp(16px,2.4vw,32px);border-left:1px solid #CFCFCF}
-.tasks h3{margin:0 0 8px;font-size:20px;font-weight:600;font-stretch:112%}
-.tasks p{margin:0;font-size:16px;line-height:1.45}
-@media (max-width:720px){
-  .tasks{grid-template-columns:1fr}
-  .tasks li + li{padding-left:0;border-left:0;margin-top:22px}
-}
-
-.contact{padding:clamp(40px,6vw,72px) var(--pad);display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap}
-.contact h2{margin:0;font-size:clamp(20px,2.4vw,28px);font-weight:600;font-stretch:125%}
-.contact p{margin:0;font-size:17px;color:#C4C4C4}
-
-@media (prefers-reduced-motion:no-preference){
-  .forearm{animation:place 1.5s cubic-bezier(.62,.02,.22,1) .35s both}
-  .labs{animation:arrive .7s ease-out 1.45s both}
-  .head h1,.head p{animation:arrive .7s ease-out 1.9s both}
-  @keyframes place{0%{transform:rotate(-58deg)}82%{transform:rotate(2.5deg)}100%{transform:rotate(0deg)}}
-  @keyframes arrive{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-}
-</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
 
@@ -105,9 +29,12 @@ a:focus-visible{outline:3px solid var(--glow);outline-offset:3px}
       </svg>
     </a>
     <div class="nav-links">
-      <a class="plain" href="#lab">Robotics</a>
-      <a class="plain" href="#lab">The work</a>
-      <a class="talk" href="#contact">Talk to us</a>
+      <a class="plain" href="robots.html">Robots</a>
+      <a class="plain" href="software.html">Software</a>
+      <a class="plain" href="jobs.html">Jobs</a>
+      <a class="plain" href="roadmap.html">Roadmap</a>
+      <a class="plain" href="about.html">About</a>
+      <a class="talk" href="contact.html">Talk to us</a>
     </div>
   </nav>
 
@@ -138,8 +65,8 @@ a:focus-visible{outline:3px solid var(--glow);outline-offset:3px}
         <path class="ink" d="M740 80 H690 a22.5 22.5 0 0 0 0 45 H717 a22.5 22.5 0 0 1 0 45 H667"/>
       </g>
     </svg>
-    <h1>Robots for the work that wears people out.</h1>
-    <p>Machine tending, part handling and field work in heat and dust, done by arms that learn the task.</p>
+    <h1>Autonomous factories on Earth. Robots that build beyond it.</h1>
+    <p>Today we build robots that Indian machine shops can teach themselves.</p>
   </div>
 
   <div class="scene">
@@ -149,30 +76,96 @@ a:focus-visible{outline:3px solid var(--glow);outline-offset:3px}
 </header>
 
 <main>
-  <section class="lab" id="lab">
-    <h2>What the arms are learning</h2>
-    <p class="lede">An SO-101 arm is learning the first two jobs on our bench. Field work is at the design stage.</p>
-    <ul class="tasks">
+  <section class="panel dark" id="robots">
+    <h2>Four bodies. One brain.</h2>
+    <p class="lede">We start with one: an arm on a trolley that a shop teaches by showing it the job. The same brain will run the three that follow.</p>
+    <ul class="lineup">
       <li>
-        <h3>Machine tending</h3>
-        <p>Loading raw stock and unloading finished parts at a CNC machine.</p>
+        <img src="robot-t.jpg" width="600" height="768" alt="A robot arm mounted on a hand-pushed steel trolley with a tray of machined parts on its lower shelf">
+        <h3>Trolley arm</h3>
+        <span class="when">Our first robot</span>
+        <p>An arm on a trolley that one person rolls to whichever machine needs it.</p>
       </li>
       <li>
-        <h3>Part handling</h3>
-        <p>Moving parts between bins, fixtures and trays.</p>
+        <img src="robot-a.jpg" width="600" height="768" alt="A single six-axis robot arm with a gripper on a square pedestal">
+        <h3>Station arm</h3>
+        <span class="when">Next</span>
+        <p>A fixed arm for machine tending and part handling at one station.</p>
       </li>
       <li>
-        <h3>Field work</h3>
-        <p>Outdoor jobs in heat and dust, starting with solar sites.</p>
+        <img src="robot-b.jpg" width="600" height="768" alt="A two-armed robot with a camera head on a four-wheeled base">
+        <h3>Mobile two-arm</h3>
+        <span class="when">Next</span>
+        <p>Moves between machines on a shop floor and works with both hands.</p>
+      </li>
+      <li>
+        <img src="robot-c.jpg" width="600" height="768" alt="A two-armed robot on a wide chassis with large all-terrain tyres">
+        <h3>Field robot</h3>
+        <span class="when">Next</span>
+        <p>A rugged two-armed machine for outdoor work, starting with solar sites.</p>
       </li>
     </ul>
+    <p class="fine">Concept renders. <a href="robots.html">See all four robots</a></p>
   </section>
 
-  <section class="contact" id="contact">
-    <h2>Have a task a robot arm could take over?</h2>
-    <p>Write to us at [your email]</p>
+  <section class="panel light" id="jobs">
+    <h2>The first three jobs.</h2>
+    <p class="lede">Work in a machine shop that is repetitive and hard to staff, especially at night.</p>
+    <ul class="cols">
+      <li><h3>CNC machine tending</h3><p>Loading raw stock and unloading finished parts, shift after shift.</p></li>
+      <li><h3>Pick and place</h3><p>Picking parts and placing them into fixtures, trays and machines.</p></li>
+      <li><h3>Inspection</h3><p>Presenting parts to a camera or gauge and sorting pass from fail.</p></li>
+    </ul>
+    <a class="btn" href="jobs.html">See all nine jobs</a>
+  </section>
+
+  <section class="band dark" id="work-with-us">
+    <h2>Two ways to work with us.</h2>
+    <p class="lede">nA labs and OrderShed are both part of NAutomation Labs. One team, two things you can ask for.</p>
+    <ul class="loop" style="grid-template-columns:repeat(2,1fr)">
+      <li><h3>You need parts made</h3><p>OrderShed takes your drawing and delivers machined parts from our partner shops, inspected and documented.</p></li>
+      <li><h3>You need a job automated</h3><p>nA labs puts a robot on that job in your shop and teaches it with your own people.</p></li>
+    </ul>
+    <a class="btn" href="contact.html">Tell us which</a>
+  </section>
+
+  <section class="panel light" id="roadmap">
+    <h2>Where this goes.</h2>
+    <p class="lede">This is the vision, not a list of what we do today. We work on the first step, and each step makes the next one possible.</p>
+    <ol class="cols five">
+      <li>
+        <span class="when">Stage 1</span>
+        <h3>Shop floors</h3>
+        <p>Robots that tend machines, handle parts and assemble.</p>
+      </li>
+      <li>
+        <span class="when">Stage 2</span>
+        <h3>Field sites</h3>
+        <p>Robots that work outdoors in heat and dust, starting with solar.</p>
+      </li>
+      <li>
+        <span class="when">Stage 3</span>
+        <h3>One brain</h3>
+        <p>Software that learns each job by demonstration and runs on every robot we build.</p>
+      </li>
+      <li>
+        <span class="when">Stage 4</span>
+        <h3>Autonomous factories</h3>
+        <p>Whole floors that run and retool themselves through software.</p>
+      </li>
+      <li>
+        <span class="when">Stage 5</span>
+        <h3>Beyond Earth</h3>
+        <p>Robots that construct and maintain buildings in orbit and on the Moon.</p>
+      </li>
+    </ol>
+    <p class="ask" id="contact">Have work a robot should be doing? Write to us at <a href="mailto:office@nautomationlabs.com">office@nautomationlabs.com</a></p>
   </section>
 </main>
+<footer class="foot2">
+  <span>NAutomation Labs Private Limited, Tamil Nadu: nA labs (robotics), OrderShed (machined parts) and Decibyl (AI agents). Images marked concept are renders.</span>
+  <nav aria-label="Footer"><a href="index.html">Home</a><a href="robots.html">Robots</a><a href="software.html">Software</a><a href="jobs.html">Jobs</a><a href="roadmap.html">Roadmap</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+</footer>
 
 </body>
 </html>
