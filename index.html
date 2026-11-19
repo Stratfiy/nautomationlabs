@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nA labs — homepage hero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+<style>
+:root{
+  --night:#050505;
+  --indigo:#0C123F;
+  --ink:#111111;
+  --blue:#111111;
+  --glow:#CFCFCF;
+  --paper:#EDEDED;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:#fff;font-family:'Archivo','Helvetica Neue',Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--glow);outline-offset:3px}
+
+.hero{
+  position:relative;overflow:hidden;
+  min-height:100vh;min-height:100svh;
+  display:flex;flex-direction:column;
+  padding:clamp(18px,3vw,32px) var(--pad) 0;
+  background:#060606;
+}
+
+.nav{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.nav .nav-mark{display:block;width:clamp(52px,6vw,66px);height:auto}
+.nav-links{display:flex;align-items:center;gap:clamp(20px,3vw,40px);font-size:14px;font-weight:600;font-stretch:112%;letter-spacing:.09em;text-transform:uppercase}
+.nav-links a{text-decoration:none;padding:12px 0;white-space:nowrap}
+.nav-links a:hover{color:var(--glow)}
+.nav-links a.talk{background:#fff;color:#000;padding:13px 22px;border-radius:4px;font-weight:600}
+.nav-links a.talk:hover{background:var(--glow);color:#000}
+@media (max-width:640px){.nav-links a.plain{display:none}}
+
+.head{position:relative;z-index:2;text-align:center;padding-top:clamp(20px,4vh,56px)}
+.wordmark{display:block;width:100%;height:auto;overflow:visible}
+.head .wordmark{max-width:1040px;margin:0 auto}
+@media (min-width:900px){.head .wordmark{max-width:min(860px,60vw)}}
+.wordmark .ink{fill:none;stroke:#fff;stroke-width:26;stroke-linejoin:round}
+.wordmark .joint{fill:#fff}
+.wordmark .part{fill:#9C9C9C}
+.forearm{transform-box:view-box;transform-origin:215px 34px}
+.head h1{margin:clamp(18px,3vh,30px) auto 0;font-size:clamp(20px,2.7vw,34px);line-height:1.18;font-weight:600;font-stretch:125%;letter-spacing:-0.005em;max-width:17em;color:#fff}
+.head p{margin:12px auto 0;font-size:17px;line-height:1.45;color:#C4C4C4;max-width:30em}
+
+.scene{position:relative;z-index:1;margin:auto calc(-1 * var(--pad)) 0;display:flex;justify-content:center}
+.scene img{display:block;flex:none;width:max(100%,190vw,560px);max-width:1536px;height:auto;margin-top:-17vw;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 24%);mask-image:linear-gradient(180deg,transparent 0,#000 24%)}
+@media (min-width:900px){.scene img{width:min(118%,1700px);max-width:none;margin-top:-11vw}}
+.note{position:absolute;right:var(--pad);bottom:12px;z-index:3;margin:0;font-size:14px;color:#BDBDBD}
+
+.lab{background:var(--paper);color:var(--ink);padding:clamp(48px,8vw,96px) var(--pad)}
+.lab h2{margin:0 0 10px;font-size:clamp(24px,3vw,34px);font-weight:600;font-stretch:125%}
+.lab .lede{margin:0 0 clamp(28px,4vw,48px);font-size:17px;line-height:1.5;max-width:34em}
+.tasks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr)}
+.tasks li{padding:22px clamp(16px,2.4vw,32px) 6px 0;border-top:3px solid var(--blue)}
+.tasks li + li{padding-left:clamp(16px,2.4vw,32px);border-left:1px solid #CFCFCF}
+.tasks h3{margin:0 0 8px;font-size:20px;font-weight:600;font-stretch:112%}
+.tasks p{margin:0;font-size:16px;line-height:1.45}
+@media (max-width:720px){
+  .tasks{grid-template-columns:1fr}
+  .tasks li + li{padding-left:0;border-left:0;margin-top:22px}
+}
+
+.contact{padding:clamp(40px,6vw,72px) var(--pad);display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap}
+.contact h2{margin:0;font-size:clamp(20px,2.4vw,28px);font-weight:600;font-stretch:125%}
+.contact p{margin:0;font-size:17px;color:#C4C4C4}
+
+@media (prefers-reduced-motion:no-preference){
+  .forearm{animation:place 1.5s cubic-bezier(.62,.02,.22,1) .35s both}
+  .labs{animation:arrive .7s ease-out 1.45s both}
+  .head h1,.head p{animation:arrive .7s ease-out 1.9s both}
+  @keyframes place{0%{transform:rotate(-58deg)}82%{transform:rotate(2.5deg)}100%{transform:rotate(0deg)}}
+  @keyframes arrive{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <nav class="nav" aria-label="Main">
+    <a href="#top" aria-label="nA labs, home">
+      <svg class="nav-mark wordmark" viewBox="0 0 300 213" aria-hidden="true">
+        <clipPath id="baseA"><rect x="0" y="-40" width="760" height="223"/></clipPath>
+        <mask id="holesA" maskUnits="userSpaceOnUse" x="-50" y="-80" width="900" height="360">
+          <rect x="-50" y="-80" width="900" height="360" fill="#fff"/>
+          <circle cx="215" cy="38" r="6.5" fill="#000"/>
+          <circle cx="163" cy="163" r="5.5" fill="#000"/>
+        </mask>
+        <path class="ink" d="M30 183 V80"/>
+        <path class="ink" d="M30 125 a45 45 0 0 1 90 0 V183"/>
+        <g mask="url(#holesA)">
+          <path class="ink" d="M150 195 L215 34" clip-path="url(#baseA)"/>
+          <path class="ink" d="M215 34 L254 130"/>
+          <circle class="joint" cx="215" cy="34" r="13"/>
+        </g>
+        <rect class="part" x="250" y="159" width="24" height="24"/>
+      </svg>
+    </a>
+    <div class="nav-links">
+      <a class="plain" href="#lab">Robotics</a>
+      <a class="plain" href="#lab">The work</a>
+      <a class="talk" href="#contact">Talk to us</a>
+    </div>
+  </nav>
+
+  <div class="head" id="top">
+    <svg class="wordmark" viewBox="0 0 760 213" role="img" aria-label="nA labs">
+      <clipPath id="baseB"><rect x="0" y="-40" width="760" height="223"/></clipPath>
+      <mask id="holesB" maskUnits="userSpaceOnUse" x="-50" y="-80" width="900" height="360">
+        <rect x="-50" y="-80" width="900" height="360" fill="#fff"/>
+        <circle cx="215" cy="38" r="6.5" fill="#000"/>
+        <circle cx="163" cy="163" r="5.5" fill="#000"/>
+      </mask>
+      <path class="ink" d="M30 183 V80"/>
+      <path class="ink" d="M30 125 a45 45 0 0 1 90 0 V183"/>
+      <g mask="url(#holesB)">
+        <path class="ink" d="M150 195 L215 34" clip-path="url(#baseB)"/>
+        <g class="forearm">
+          <path class="ink" d="M215 34 L254 130"/>
+          <rect class="part" x="250" y="159" width="24" height="24"/>
+        </g>
+        <circle class="joint" cx="215" cy="34" r="13"/>
+      </g>
+      <g class="labs">
+        <path class="ink" d="M340 30 V183"/>
+        <path class="ink" d="M485 125 a45 45 0 1 0 -90 0 a45 45 0 1 0 90 0"/>
+        <path class="ink" d="M485 80 V183"/>
+        <path class="ink" d="M535 30 V183"/>
+        <path class="ink" d="M625 125 a45 45 0 1 0 -90 0 a45 45 0 1 0 90 0"/>
+        <path class="ink" d="M740 80 H690 a22.5 22.5 0 0 0 0 45 H717 a22.5 22.5 0 0 1 0 45 H667"/>
+      </g>
+    </svg>
+    <h1>Robots for the work that wears people out.</h1>
+    <p>Machine tending, part handling and field work in heat and dust, done by arms that learn the task.</p>
+  </div>
+
+  <div class="scene">
+    <img src="robot.jpg" width="1536" height="864" alt="A two-armed mobile robot on a black studio floor, lit in white, holding a machined metal cube in one gripper">
+  </div>
+  <p class="note">Concept render</p>
+</header>
+
+<main>
+  <section class="lab" id="lab">
+    <h2>What the arms are learning</h2>
+    <p class="lede">An SO-101 arm is learning the first two jobs on our bench. Field work is at the design stage.</p>
+    <ul class="tasks">
+      <li>
+        <h3>Machine tending</h3>
+        <p>Loading raw stock and unloading finished parts at a CNC machine.</p>
+      </li>
+      <li>
+        <h3>Part handling</h3>
+        <p>Moving parts between bins, fixtures and trays.</p>
+      </li>
+      <li>
+        <h3>Field work</h3>
+        <p>Outdoor jobs in heat and dust, starting with solar sites.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Have a task a robot arm could take over?</h2>
+    <p>Write to us at [your email]</p>
+  </section>
+</main>
+
+</body>
+</html>
